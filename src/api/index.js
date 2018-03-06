@@ -23,7 +23,7 @@ export default ({ config, db }) => {
 		    	Subject: process.env.SUBJECT,
 		    	'Text-part': "\n From: " + req.body.name + "\n email: " + req.body.email + "\n Message: " + req.body.message,
 		    	Recipients: [{'Email': process.env.RECIPIENT_EMAIL}]
-		  }, function (err, res) {
+		  }, function (err, response) {
 				if (err) {
 					return res.json({
 						status: "error",

@@ -15,7 +15,7 @@ export default ({ config, db }) => {
 	});
 
 	api.post('/', (req, res) => {
-		const request = mailjet.connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE+"a")
+		const request = mailjet.connect(process.env.MJ_APIKEY_PUBLIC, process.env.MJ_APIKEY_PRIVATE)
 		    .post("send")
 		    .request({
 		    	FromEmail: process.env.SENDER_EMAIL,
